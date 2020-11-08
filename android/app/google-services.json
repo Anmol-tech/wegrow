@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "514246960958",
+    "firebase_url": "https://app-wegrow.firebaseio.com",
+    "project_id": "app-wegrow",
+    "storage_bucket": "app-wegrow.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514246960958:android:4ee6afc162a1a2dcf82e6f",
+        "android_client_info": {
+          "package_name": "com.anmol.HomeFlic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514246960958-sc11efgpv5qqa08lrc7de0egv777folr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.anmol.HomeFlic",
+            "certificate_hash": "79a436af9858d8e1ccf0fd401a57c4f1106bd43c"
+          }
+        },
+        {
+          "client_id": "514246960958-1ma5rt162slg2dresuojas4intgn6dpk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhbb9kCjalHFAwxRw75EANogk8mTjkWrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514246960958-1ma5rt162slg2dresuojas4intgn6dpk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "514246960958-jccr1drq12adc6he2cerqqgvbsgpq6nm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.homeflic"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514246960958:android:098bffc56e8c2ae5f82e6f",
+        "android_client_info": {
+          "package_name": "com.homeflic.wegrow.wegrow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514246960958-1ma5rt162slg2dresuojas4intgn6dpk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhbb9kCjalHFAwxRw75EANogk8mTjkWrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514246960958-1ma5rt162slg2dresuojas4intgn6dpk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "514246960958-jccr1drq12adc6he2cerqqgvbsgpq6nm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.homeflic"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
