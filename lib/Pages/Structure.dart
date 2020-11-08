@@ -38,7 +38,7 @@ class _StrucutreState extends State<Strucutre> {
       textStyle: TextStyle(
         color: Colors.white,
         fontWeight: FontWeight.w600,
-        fontSize: width * 0.06,
+        fontSize: width * 0.05,
       ),
     );
 
