@@ -97,7 +97,7 @@ class _HomeState extends State<Home> {
               )),
               SizedBox(
                 width: double.infinity,
-                height: 500 * factor,
+                height: 520 * factor,
                 child: ListView.builder(
                   addAutomaticKeepAlives: true,
                   physics: BouncingScrollPhysics(),
@@ -146,12 +146,15 @@ class _HomeState extends State<Home> {
                                 style: nameText,
                               ),
                             ),
-                            Container(
-                              margin: EdgeInsets.only(
-                                  top: 15, left: 15, right: 15, bottom: 5),
-                              child: Text(
-                                testimonialList[_idx]["testimonial"].toString(),
-                                style: bodyText,
+                            SingleChildScrollView(
+                              child: Container(
+                                margin: EdgeInsets.only(
+                                    top: 15, left: 15, right: 15, bottom: 5),
+                                child: Text(
+                                  testimonialList[_idx]["testimonial"]
+                                      .toString(),
+                                  style: bodyText,
+                                ),
                               ),
                             )
                           ],
