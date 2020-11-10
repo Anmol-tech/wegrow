@@ -19,24 +19,24 @@ class _ContactState extends State<Contact> {
 
   @override
   Widget build(BuildContext context) {
-    var longSide = MediaQuery.of(context).size.longestSide;
     var width = MediaQuery.of(context).size.width;
-    var height = MediaQuery.of(context).size.height;
+    var factor = MediaQuery.of(context).size.aspectRatio;
+
     var addressText = GoogleFonts.montserrat(
       textStyle: TextStyle(
-        fontSize: width * 0.04,
+        fontSize: 22 * factor,
         fontWeight: FontWeight.w600,
         color: Colors.white,
       ),
     );
     var phoneText = GoogleFonts.montserrat(
       textStyle: TextStyle(
-        fontSize: width * 0.04,
+        fontSize: 24 * factor,
         fontWeight: FontWeight.w600,
         color: Colors.white,
       ),
     );
-    return Center(
+    return Container(
       child: Container(
         padding: EdgeInsets.all(8.0),
         child: SingleChildScrollView(
@@ -44,7 +44,7 @@ class _ContactState extends State<Contact> {
             children: [
               Container(
                 width: double.infinity,
-                height: longSide * 0.2,
+                height: 200 * factor,
                 decoration: BoxDecoration(
                   color: Color(0xFF4ea751),
                   borderRadius: BorderRadius.circular(10),
@@ -62,15 +62,15 @@ class _ContactState extends State<Contact> {
                           borderRadius: BorderRadius.only(
                             topRight: Radius.circular(30),
                             bottomRight: Radius.circular(30),
-                            topLeft: Radius.circular(10),
-                            bottomLeft: Radius.circular(10),
+                            topLeft: Radius.circular(0),
+                            bottomLeft: Radius.circular(0),
                           ),
                         ),
-                        height: longSide * 0.2,
-                        width: longSide * 0.2,
+                        height: 150 * factor,
+                        width: 150 * factor,
                         child: Icon(
                           Icons.map_sharp,
-                          size: 50,
+                          size: 50 * factor,
                           color: Colors.white60,
                         ),
                       ),
@@ -78,8 +78,8 @@ class _ContactState extends State<Contact> {
                     Container(
                       alignment: Alignment.center,
                       margin: EdgeInsets.only(left: 40),
-                      height: longSide * 0.1,
-                      width: MediaQuery.of(context).size.width - 200,
+                      height: factor * 300,
+                      width: width - 200,
                       child: Text(
                         '''C-12, First Floor, CC Colony,Kalyan Vihar, New Delhi, 110007''',
                         style: addressText,
@@ -92,7 +92,7 @@ class _ContactState extends State<Contact> {
               Container(
                 margin: EdgeInsets.only(top: 20),
                 width: double.infinity,
-                height: longSide * 0.2,
+                height: 200 * factor,
                 decoration: BoxDecoration(
                   color: Color(0xFF11aeef),
                   borderRadius: BorderRadius.circular(10),
@@ -103,9 +103,9 @@ class _ContactState extends State<Contact> {
                   children: [
                     Container(
                       alignment: Alignment.center,
-                      margin: EdgeInsets.only(right: 40),
-                      height: longSide * 0.2,
-                      width: MediaQuery.of(context).size.width - 200,
+                      margin: EdgeInsets.only(right: 100),
+                      height: factor * 200,
+                      width: width - 250,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -142,7 +142,7 @@ class _ContactState extends State<Contact> {
                     ),
                     InkWell(
                       onTap: () {
-                        print('call');
+                        _launchContact(9873011445);
                       },
                       child: Container(
                         alignment: Alignment.center,
@@ -150,16 +150,16 @@ class _ContactState extends State<Contact> {
                           color: Colors.black26,
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(30),
-                            bottomLeft: Radius.circular(0),
+                            bottomLeft: Radius.circular(30),
                             topRight: Radius.circular(10),
                             bottomRight: Radius.circular(10),
                           ),
                         ),
-                        height: longSide * 0.2,
-                        width: longSide * 0.2,
+                        height: 150 * factor,
+                        width: 150 * factor,
                         child: Icon(
                           Icons.call,
-                          size: 50,
+                          size: 50 * factor,
                           color: Colors.white70,
                         ),
                       ),
@@ -170,7 +170,7 @@ class _ContactState extends State<Contact> {
               Container(
                 margin: EdgeInsets.only(top: 20),
                 width: double.infinity,
-                height: longSide * 0.2,
+                height: factor * 150,
                 decoration: BoxDecoration(
                   color: Colors.white30,
                   borderRadius: BorderRadius.circular(10),

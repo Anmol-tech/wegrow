@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hawk_fab_menu/hawk_fab_menu.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:wegrow/Pages/Contact.dart';
 import 'package:wegrow/Pages/FAQ.dart';
@@ -21,35 +22,26 @@ class _StrucutreState extends State<Strucutre> {
     Contact(),
   ];
 
-  int _idx = 3;
+  int _idx = 0;
   @override
   Widget build(BuildContext context) {
-    var longSide = MediaQuery.of(context).size.longestSide;
-    var width = MediaQuery.of(context).size.width;
-
+    var factor = MediaQuery.of(context).size.aspectRatio;
     var drawerText = GoogleFonts.montserrat(
       textStyle: TextStyle(
         color: Colors.white,
         fontWeight: FontWeight.w500,
-        fontSize: width * 0.05,
+        fontSize: 25 * factor,
       ),
     );
     var titleText = GoogleFonts.montserrat(
       textStyle: TextStyle(
         color: Colors.white,
         fontWeight: FontWeight.w600,
-        fontSize: width * 0.05,
       ),
+      fontSize: 30 * factor,
     );
 
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          launch('https://homeflicwegrow.com/');
-        },
-        child: Icon(Icons.language),
-        // tooltip: "Webi",
-      ),
       drawer: GFDrawer(
         color: Colors.white,
         child: ListView(
@@ -132,8 +124,33 @@ class _StrucutreState extends State<Strucutre> {
           style: titleText,
         ),
         centerTitle: true,
+        elevation: 30,
       ),
-      body: bodies[_idx],
+      body: HawkFabMenu(
+        icon: AnimatedIcons.menu_close,
+        fabColor: Color(0xFF11aeef),
+        iconColor: Theme.of(context).primaryColor,
+        blur: 2,
+        items: [
+          HawkFabMenuItem(
+            label: 'Homeflic Wegrow',
+            ontap: () {
+              launch("https://homeflicwegrow.com/index.php#");
+            },
+            icon: Icon(Icons.language),
+            labelColor: Colors.blue,
+          ),
+          HawkFabMenuItem(
+            label: 'Button 2',
+            ontap: () {
+              print("button2");
+            },
+            icon: Icon(Icons.comment),
+            labelColor: Colors.blue,
+          ),
+        ],
+        body: bodies[_idx],
+      ),
     );
   }
 }

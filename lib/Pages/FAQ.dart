@@ -54,18 +54,18 @@ class _FAQState extends State<FAQ> {
   }
 
   accordian(heading, text, color) {
-    var longSide = MediaQuery.of(context).size.longestSide;
-    var width = MediaQuery.of(context).size.width;
+    var factor = MediaQuery.of(context).size.aspectRatio;
+
     var titleText = GoogleFonts.montserrat(
       textStyle: TextStyle(
         color: Colors.white,
-        fontSize: width * 0.05,
+        fontSize: 28 * factor,
         fontWeight: FontWeight.w500,
       ),
     );
     var bodyText = GoogleFonts.montserrat(
       textStyle: TextStyle(
-        fontSize: longSide * 0.025,
+        fontSize: 24 * factor,
         fontWeight: FontWeight.w400,
       ),
     );
@@ -79,7 +79,6 @@ class _FAQState extends State<FAQ> {
         contentChild: Text(
           text,
           style: bodyText,
-          // textAlign: TextAlign.justify,
           softWrap: true,
         ),
         textStyle: titleText,
