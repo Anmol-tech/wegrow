@@ -128,8 +128,8 @@ class _StrucutreState extends State<Strucutre> {
       ),
       body: HawkFabMenu(
         icon: AnimatedIcons.menu_close,
-        fabColor: Color(0xFF11aeef),
-        iconColor: Theme.of(context).primaryColor,
+        fabColor: Color(0xFF4ea751),
+        // iconColor: white,
         blur: 2,
         items: [
           HawkFabMenuItem(
@@ -138,7 +138,6 @@ class _StrucutreState extends State<Strucutre> {
               launch("https://homeflicwegrow.com/index.php#");
             },
             icon: Icon(Icons.language),
-            labelColor: Colors.blue,
           ),
           HawkFabMenuItem(
             label: 'Button 2',

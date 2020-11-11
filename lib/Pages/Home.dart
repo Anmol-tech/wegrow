@@ -1,8 +1,6 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:getwidget/components/carousel/gf_carousel.dart';
-import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'DownloadData.dart';
@@ -96,15 +94,6 @@ class _HomeState extends State<Home> {
             // mainAxisAlignment: MainAxisAlignment.center,
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // GFCarousel(
-              //   enableInfiniteScroll: true,
-              //   height: MediaQuery.of(context).size.shortestSide * 0.5,
-              //   autoPlay: true,
-              //   items: imgList,
-              //   viewportFraction: 1   var loop = true;00.0,
-              //   pauseAutoPlayOnTouch: Duration(seconds: 3),
-              //   scrollPhysics: BouncingScrollPhysics(),
-              // ),
               LimitedBox(
                 // maxHeight: 200,
                 child: AspectRatio(
@@ -131,7 +120,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                padding: const EdgeInsets.symmetric(vertical: 15.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(15),
                   child: Container(
@@ -146,38 +135,33 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-              LimitedBox(
-                // maxHeight: 200,
 
-                child: AspectRatio(
-                  aspectRatio: MediaQuery.of(context).orientation.toString() ==
-                          Orientation.landscape.toString()
-                      ? 1.9
-                      : 1,
-                  child: Swiper(
-                    loop: true,
-                    autoplay: true,
-                    // index: 0,
-                    // autoplayDelay: 5,
-
-                    itemBuilder: (BuildContext context, int _idx) {
-                      return Container(
-                        width: 350,
+              AspectRatio(
+                aspectRatio: MediaQuery.of(context).orientation.toString() ==
+                        Orientation.landscape.toString()
+                    ? 3
+                    : 1,
+                child: Swiper(
+                  loop: true,
+                  autoplay: true,
+                  itemBuilder: (BuildContext context, int _idx) {
+                    return Center(
+                      child: Container(
                         child: Card(
-                          elevation: 5,
+                          elevation: 10,
                           borderOnForeground: true,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20),
-                            side: BorderSide(color: color[_idx % 5], width: 5),
+                            side: BorderSide(color: color[_idx % 5], width: 10),
                           ),
                           child: SingleChildScrollView(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.only(top: 20),
-                                  child: CircleAvatar(
+                            child: Padding(
+                              padding: const EdgeInsets.all(30.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  CircleAvatar(
                                     backgroundColor: color[_idx % 5],
                                     radius: MediaQuery.of(context)
                                             .size
@@ -187,45 +171,49 @@ class _HomeState extends State<Home> {
                                         testimonialList[_idx]['photo']
                                             .toString()),
                                   ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(top: 10),
-                                  child: Text(
-                                    testimonialList[_idx]["name"].toString(),
-                                    style: nameText,
+                                  Container(
+                                    margin: EdgeInsets.only(top: 10),
+                                    child: Text(
+                                      testimonialList[_idx]["name"].toString(),
+                                      style: nameText,
+                                    ),
                                   ),
-                                ),
-                                Container(
-                                  child: Text(
-                                    testimonialList[_idx]["college"].toString(),
-                                    style: nameText,
+                                  Container(
+                                    child: Text(
+                                      testimonialList[_idx]["college"]
+                                          .toString(),
+                                      style: nameText,
+                                    ),
                                   ),
-                                ),
-                                Container(
-                                  child: Text(
-                                    testimonialList[_idx]["city"].toString(),
-                                    style: nameText,
+                                  Container(
+                                    child: Text(
+                                      testimonialList[_idx]["city"].toString(),
+                                      style: nameText,
+                                    ),
                                   ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(
-                                      top: 15, left: 15, right: 15, bottom: 5),
-                                  child: Text(
-                                    testimonialList[_idx]["testimonial"]
-                                        .toString(),
-                                    style: bodyText,
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top: 15,
+                                        left: 15,
+                                        right: 15,
+                                        bottom: 5),
+                                    child: Text(
+                                      testimonialList[_idx]["testimonial"]
+                                          .toString(),
+                                      style: bodyText,
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         ),
-                      );
-                    },
-                    itemCount: testimonialList.length,
-                    viewportFraction: 0.8,
-                    scale: 0.9,
-                  ),
+                      ),
+                    );
+                  },
+                  itemCount: testimonialList.length,
+                  viewportFraction: 0.8,
+                  scale: 0.9,
                 ),
               ),
 
