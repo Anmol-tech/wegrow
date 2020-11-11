@@ -25,12 +25,12 @@ class _StrucutreState extends State<Strucutre> {
   int _idx = 0;
   @override
   Widget build(BuildContext context) {
-    var factor = MediaQuery.of(context).size.aspectRatio;
+    // var factor = MediaQuery.of(context).size;
     var drawerText = GoogleFonts.montserrat(
       textStyle: TextStyle(
         color: Colors.white,
         fontWeight: FontWeight.w500,
-        fontSize: 25 * factor,
+        fontSize: 20,
       ),
     );
     var titleText = GoogleFonts.montserrat(
@@ -38,7 +38,7 @@ class _StrucutreState extends State<Strucutre> {
         color: Colors.white,
         fontWeight: FontWeight.w600,
       ),
-      fontSize: 30 * factor,
+      fontSize: 22,
     );
 
     return Scaffold(

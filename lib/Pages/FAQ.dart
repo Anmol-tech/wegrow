@@ -22,10 +22,15 @@ class _FAQState extends State<FAQ> {
             accordian(
                 'Who can join Wegrow ?',
                 ''' 1. YOU
+
  2. And that annoying friend who keeps calling for no reason.
+
  3. And the one who never picks up.
+
  4. The one whom you cheat from and the one you share your burger with,
+
  5. The ones you've lost touch with and
+
  6. The ones that you meet daily!''',
                 0xFF00ADEF),
             accordian(
@@ -54,18 +59,18 @@ class _FAQState extends State<FAQ> {
   }
 
   accordian(heading, text, color) {
-    var factor = MediaQuery.of(context).size.aspectRatio;
+    var factor = MediaQuery.of(context).size;
 
     var titleText = GoogleFonts.montserrat(
       textStyle: TextStyle(
         color: Colors.white,
-        fontSize: 28 * factor,
+        fontSize: 0.05 * factor.width,
         fontWeight: FontWeight.w500,
       ),
     );
     var bodyText = GoogleFonts.montserrat(
       textStyle: TextStyle(
-        fontSize: 24 * factor,
+        fontSize: 0.04 * factor.width,
         fontWeight: FontWeight.w400,
       ),
     );
