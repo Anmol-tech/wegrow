@@ -53,7 +53,9 @@ class _HomeState extends State<Home> {
 
   _body() {
     var factor = MediaQuery.of(context).size.aspectRatio;
-    var width = MediaQuery.of(context).size.width;
+
+    var orentation = MediaQuery.of(context).orientation;
+
     var color = [
       Color(0xFFf24d65),
       Color(0xFF11aeef),
@@ -64,26 +66,27 @@ class _HomeState extends State<Home> {
 
     var headingText = GoogleFonts.montserrat(
       textStyle: TextStyle(
-        fontSize: 30,
-        fontWeight: FontWeight.w500,
+        fontSize:
+            orentation == Orientation.landscape ? factor * 20 : factor * 40,
+        fontWeight: FontWeight.w600,
         color: Colors.white,
       ),
     );
 
     var bodyText = GoogleFonts.montserrat(
       textStyle: TextStyle(
-        fontSize: 18,
+        fontSize:
+            orentation == Orientation.landscape ? factor * 12 : factor * 30,
         fontWeight: FontWeight.w400,
       ),
     );
     var nameText = GoogleFonts.montserrat(
       textStyle: TextStyle(
-        fontSize: 20,
+        fontSize:
+            orentation == Orientation.landscape ? factor * 13 : factor * 30,
         fontWeight: FontWeight.w500,
       ),
     );
-
-    SwiperController swipe = new SwiperController();
 
     return Padding(
       padding: const EdgeInsets.all(8.0),
