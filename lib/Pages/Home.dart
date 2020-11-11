@@ -84,6 +84,7 @@ class _HomeState extends State<Home> {
     );
 
     SwiperController swipe = new SwiperController();
+
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
@@ -104,7 +105,10 @@ class _HomeState extends State<Home> {
               LimitedBox(
                 // maxHeight: 200,
                 child: AspectRatio(
-                  aspectRatio: 7 / 4,
+                  aspectRatio: MediaQuery.of(context).orientation.toString() ==
+                          Orientation.landscape.toString()
+                      ? 2.4
+                      : 1.75,
                   child: Swiper(
                     autoplay: loop,
                     loop: loop,
@@ -141,8 +145,12 @@ class _HomeState extends State<Home> {
               ),
               LimitedBox(
                 // maxHeight: 200,
+
                 child: AspectRatio(
-                  aspectRatio: 1 / 1,
+                  aspectRatio: MediaQuery.of(context).orientation.toString() ==
+                          Orientation.landscape.toString()
+                      ? 1.9
+                      : 1,
                   child: Swiper(
                     loop: true,
                     autoplay: true,
