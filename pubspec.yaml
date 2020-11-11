@@ -33,6 +33,7 @@ dependencies:
   hawk_fab_menu: ^0.3.2
   maps_launcher: ^1.2.2+2
   url_launcher: ^5.7.5
+  expansion_tile_card: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -56,6 +57,22 @@ flutter:
     - Images/Logo/instagram.png
     - Images/Logo/linkedin.png
     - Images/Logo/youtube.png
+    - Images/Images/icon1.png
+    - Images/Images/icon2.png
+    - Images/Images/icon3.png
+    - Images/Images/icon4.png
+    - Images/Images/icon5.png
+    - Images/Images/icon6.png
+    - Images/Images/icon7.png
+    - Images/Images/icon8.png
+    - Images/Images/icon9.png
+    - Images/Images/icon10.png
+    - Images/Images/icon11.png
+    - Images/Images/icon12.png
+    - Images/Images/icon13.png
+    - Images/Images/icon14.png
+    - Images/Images/icon15.png
+    - Images/Images/icon16.png
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
