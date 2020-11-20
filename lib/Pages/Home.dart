@@ -200,6 +200,7 @@ class _HomeState extends State<Home> {
                                     child: Text(
                                       testimonialList[_idx]["testimonial"]
                                           .toString(),
+                                      textAlign: TextAlign.justify,
                                       style: bodyText,
                                     ),
                                   ),

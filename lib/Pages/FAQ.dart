@@ -16,11 +16,11 @@ class _FAQState extends State<FAQ> {
         child: Column(
           children: [
             accordian(
-                'What is Wegrow ?',
+                '  What is Wegrow ?',
                 '''Homeflic wegrow is a tribe of people from all over the world, having diverse mindsets and personalities, learning and growing together. It’s a platform where people can showcase their talent,discuss their problems, talk about trending topics and build a network stronger than any bond.''',
                 0xFFFF0065),
             accordian(
-                'Who can join Wegrow ?',
+                '  Who can join Wegrow ?',
                 ''' 1. YOU
 
  2. And that annoying friend who keeps calling for no reason.
@@ -34,8 +34,8 @@ class _FAQState extends State<FAQ> {
  6. The ones that you meet daily!''',
                 0xFF00ADEF),
             accordian(
-                'How can I join Wegrow ?',
-                '''1. Provides people with an environment where they can discuss their issues and can open up without any fear of judgement.
+              '  How can I join Wegrow ?',
+              '''1. Provides people with an environment where they can discuss their issues and can open up without any fear of judgement.
                 
  2. Discuss various social issues and contribute towards society in many ways through our various drives under various community outreach programmes.
  
@@ -43,14 +43,15 @@ class _FAQState extends State<FAQ> {
  
  4. Organizes various parties/events/trips/excursions for recreational purposes.
  ''',
-                0xFF00A652),
+              0xFF00A652,
+            ),
             accordian(
-                'What do we do at Wegrow ?',
+                '  What do we do at Wegrow ?',
                 '''We are a family where we support each other and guide through real life problems while learning from each other. We are a platform for your skill development and building a better future.''',
                 0xFFC12C6E),
             accordian(
-                'What is S.C.O.P.E ?',
-                '''S.C.O.P.E expands into Student Community Outreach Programme for Es wherein E stands for our Essue of the month [ Essentials, Empowerment, Environment,Education etc.] and changes periodically, owing to changing  social scenarios.''',
+                '  What is S.C.O.P.E ?',
+                '''S.C.O.P.E expands into Student Community Outreach Programme for Es wherein E stands for our Essue of the month [ Essentials, Empowerment, Environment, Education etc. ] and changes periodically, owing to changing  social scenarios.''',
                 0xFFE18619)
           ],
         ),
@@ -87,6 +88,7 @@ class _FAQState extends State<FAQ> {
           text,
           style: bodyText,
           softWrap: true,
+          textAlign: TextAlign.justify,
         ),
         textStyle: titleText,
         contentBackgroundColor: Colors.white,

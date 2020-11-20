@@ -10,7 +10,13 @@ class WhatYouGet extends StatefulWidget {
 class _WhatYouGetState extends State<WhatYouGet> {
   @override
   Widget build(BuildContext context) {
-    var list = [0xfff24d65, 0xffdb4d7e, 0xFF4ea751, 0xfff7942c, 0xff64d04b];
+    var list = [
+      0XFFc2436f,
+      0xFFe08727,
+      0xFFf24d65,
+      0xFF11aeef,
+      0xFF4ea751,
+    ];
 
     return ListView(children: [
       itemSet(
@@ -45,12 +51,17 @@ And how come that can happen when you are a part of the WeGrow family. We are he
           list[0],
           context),
       itemSet(
-          'ENTREPRENEURSHIP BOOT CAMP',
+          'Entrepreneurship Boot Camp',
           '''Ever dreamt of starting your own business but the stress of funding, failure and criticism pulls you back? Ever thought of taking over the entrepreneur world with your ideas, but don’t know where to begin with?
+
 We the tribe of WeGrow are providing you with all the answers to all your questions by the finest leading experts in the entrepreneur world.
+
 WHAT EXACTLY IS ENTREPRENEURSHIP BOOTCAMP?
+
 A bootcamp generally means training camp for learning various types of skills. In Entrepreneurship bootcamp we will bring together young entrepreneurs/leaders from across India and help them discover the areas which will help them grow as an individual as well as their business. 
+
 WHY WEGROW?
+
 Here at WeGrow, unlike basic and dull bootcamps, we’ll make it a lot more happening and won’t let you regret. Every second spent at the bootcamp will be worth your time and after it ends you’ll definitely come out as a new and confident individual.
 
 The best part is yet to come..
@@ -66,24 +77,33 @@ So what are you waiting for? Enrol now and grab this opportunity be a #tribester
           list[1],
           context),
       itemSet(
-          'Knowledge summits',
+          'Knowledge Summits',
           '''Whether an extrovert or an introvert this knowledge summit is open for all, because we at WeGrow believe in equality
+
 The sessions included are :
+
 1. Hard skills : We’ll provide you with best hard skills knowledge by the experts from various fields.
+
 2. Soft skills development : Do you lack confidence? Do you have stage fear? Don’t worry we are here to help you with legit anything and everything.
+
 3. Literary nights : For every budding poet and writer out there, this is your call to showcase your admirable pieces.
+
 4. Gaming nights : For every gaming enthusiast out there, here’s your chance to let everyone know who the real MVP is !!!
+
 5. Motivational nights : Feeling low? Feeling anxious? Need the right kind of motivation, well this is your one stop for all the feelings that cannot be described but still weighs you down. Join this tribe, feel the vibes and grow as an individual together with WeGrow.
+
 Also, there will be a fun and interactive session where we'll give each and everyone to talk about things that are normal but not considered normal by our society, in short the taboos. Periods, pride and everything. 
 So keep your pens and papers ready, write your heart out because we are inviting you the greatest knowledge summit everrrrr!''',
           'Images/Images/icon7.png',
           list[2],
           context),
       itemSet(
-          'Volunteering opportunities',
+          'Volunteering Opportunities',
           '''Homeflic Wegrow SCOPE is an initiative wherein our tribesters promote social change, development, cohesion and the empowerment of people and communities, and other creatures through various drives.
 PERKS.
+
 GOOD DEEDS SHOULD BE DONE WITH INTENTION AND NOT FOR ATTENTION.
+
 With the negative impacts of society comes some positive impacts too. 
 When you volunteer with scope you get to pay back to the society. In this drive we will be arranging various events, like feeding underprivileged people, feeding stray animals and much more. 
 Usually, we’ve seen people posting pictures of themselves feeding the underprivileged people which is quite unacceptable but here we do not believe in advertising our deeds instead we believe in bringing smiles to those faces by doing our best!
@@ -92,7 +112,7 @@ So, what are you waiting for? Join our tribe and let’s bring smile on those br
           list[3],
           context),
       itemSet(
-          'Internship opportunity',
+          'Internship Opportunity',
           '''We all dream of a job where we want to feel comfortable, we want to have less work pressure, where we don’t want colleagues but a family 
 Well, WeGrow is here at your service, fellas! We provide you with internship opportunities in various fields like HR, content department and much more
 We are a TRIBE, a tribe full of vibe! 
@@ -103,7 +123,7 @@ So what are you waiting for? Show us what you’ve got and join our tribe be our
           list[4],
           context),
       itemSet(
-          'Official merchandise',
+          'Official Merchandise',
           '''Once you join our tribe, we’ll not let you be empty-handed instead you’ll have access to our official merchandise which symbolizes our bond. We have designed a t-shirt with our tribe’s logo in the front and #systemhiladenge at the back.
 So are you ready to shake the system? 
 Come and join us! We’re waiting to have you in our tribe!''',
@@ -111,26 +131,27 @@ Come and join us! We’re waiting to have you in our tribe!''',
           list[0],
           context),
       itemSet(
-          'Musical evenings, meet & more',
+          'Musical Evenings, Meet & More',
           '''what happens if a community offers you an evening for soul stirring music?
- We grow gives you the opportunity to witness the greatest talent across the world to put together a soulful evening and more.''',
+
+We grow gives you the opportunity to witness the greatest talent across the world to put together a soulful evening and more.''',
           'Images/Images/icon11.png',
           list[1],
           context),
       itemSet(
-          'Open mics',
+          'Open Mics',
           '''Open mic events are a rite of passage for many people. Here, as the world opens to the new normal, it is time for all the budding speakers to try out new material at our open mic events.''',
           'Images/Images/icon12.png',
           list[2],
           context),
       itemSet(
-          'Events and parties',
+          'Events and Parties',
           '''Apart from growing together, let's bond for a celebration and enjoy forgetting all limits. Enjoy the luxury, excitement and delicacies come together to curate the best experience at homeflic wegrow.''',
           'Images/Images/icon13.png',
           list[3],
           context),
       itemSet(
-          'Certificate courses',
+          'Certificate Courses',
           '''homeflic wegrow is delighted to offer you a variety of certified courses to stand out in your field and  showcase your valuable knowledge and key skills.''',
           'Images/Images/icon14.png',
           list[4],
@@ -142,7 +163,7 @@ Come and join us! We’re waiting to have you in our tribe!''',
           list[0],
           context),
       itemSet(
-          'One-on-one sessions',
+          'One-on-one Sessions',
           '''Research shows we learn best from people we get on well with, in a friendly and relaxed atmosphere. We provide personalized one-on-one sessions for high quality interaction''',
           'Images/Images/icon16.png',
           list[1],
@@ -153,27 +174,6 @@ Come and join us! We’re waiting to have you in our tribe!''',
           '',
           list[2],
           context),
-//       Container(
-//         margin: EdgeInsets.all(10),
-//         alignment: Alignment.center,
-//         padding: EdgeInsets.all(10),
-//         width: double.infinity,
-//         height: 100,
-//         decoration: BoxDecoration(
-//           color: Color(0xFF11aeef),
-//           borderRadius: BorderRadius.circular(10),
-//         ),
-//         child: Text(
-//           '''A family like tribe to learn,
-// achieve and grow with''',
-//           style: TextStyle(
-//             color: Colors.white,
-//             fontWeight: FontWeight.w600,
-//             fontSize: 20,
-//           ),
-//           softWrap: true,
-//         ),
-//       )
     ]);
   }
 }
@@ -237,6 +237,7 @@ itemSet(title, text, image, color, context) {
                 child: Text(
                   text,
                   style: bodyText,
+                  textAlign: TextAlign.justify,
                 ),
               )),
         ],
