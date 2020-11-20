@@ -119,6 +119,28 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
+
+              Container(
+                padding: EdgeInsets.only(top: 10),
+                child: Column(
+                  children: [
+                    Text(
+                      "WEGROW TRIBE",
+                      style: TextStyle(fontSize: 25.0),
+                      textAlign: TextAlign.center,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: Text(
+                          "Homeflic wegrow is a tribe of people from all over the world, having diverse mindsets and personalities, learning and growing together. It’s a platform where people can showcase their talent, discuss their problems, talk about trending topics and build a network stronger than any bond. Focusing on holistic development of our members along with us, we believe in learning, working, and growing together.",
+                          textAlign: TextAlign.justify),
+                    ),
+                  ],
+                ),
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(5), color: Colors.grey[300]),
+              ),
+
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 15.0),
                 child: ClipRRect(
