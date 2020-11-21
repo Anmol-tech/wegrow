@@ -34,6 +34,12 @@ dependencies:
   maps_launcher: ^1.2.2+2
   url_launcher: ^5.7.5
   expansion_tile_card: ^1.1.0
+  flutter_launcher_icons: ^0.7.4
+
+flutter_icons:
+  image_path: 'Images/Icon.png'
+  android: true
+  ios: true
 
 dev_dependencies:
   flutter_test:
@@ -73,7 +79,9 @@ flutter:
     - Images/Images/icon14.png
     - Images/Images/icon15.png
     - Images/Images/icon16.png
-  
+    - Images/Band/
+    - Images/Cards/
+    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

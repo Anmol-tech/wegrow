@@ -129,22 +129,22 @@ class _StrucutreState extends State<Strucutre> {
       body: HawkFabMenu(
         icon: AnimatedIcons.menu_close,
         fabColor: Color(0xFF4ea751),
-        // iconColor: white,
         blur: 2,
         items: [
           HawkFabMenuItem(
             label: 'Homeflic Wegrow',
+            labelColor: Colors.blue,
             ontap: () {
               launch("https://homeflicwegrow.com/index.php#");
             },
             icon: Icon(Icons.language),
           ),
           HawkFabMenuItem(
-            label: 'Button 2',
+            label: 'Join Tribe',
             ontap: () {
-              print("button2");
+              launch('https://homeflicwegrow.com/join-tribe.php');
             },
-            icon: Icon(Icons.comment),
+            icon: Icon(Icons.thumb_up_alt_outlined),
             labelColor: Colors.blue,
           ),
         ],
