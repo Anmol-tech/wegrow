@@ -205,6 +205,8 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                 height: 250,
                 // width: double.infinit,
                 child: Swiper(
+                  autoplay: true,
+                  autoplayDelay: 6000,
                   layout: SwiperLayout.STACK,
                   itemWidth: MediaQuery.of(context).size.width * 0.8,
                   itemHeight: 300.0,
@@ -255,6 +257,10 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                   },
                 ),
               ),
+
+
+
+
               Padding(
                 padding: const EdgeInsets.only(
                     top: 25, left: 10, right: 10, bottom: 10),
