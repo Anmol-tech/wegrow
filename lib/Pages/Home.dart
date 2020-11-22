@@ -49,6 +49,24 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
     'https://homeflicwegrow.com/wegrow-champs.php',
   ];
 
+  var coursesImage = [
+    AssetImage('Images/Courses/Group 4.png'),
+    AssetImage('Images/Courses/Group 5.png'),
+    AssetImage('Images/Courses/Group 6.png'),
+    AssetImage('Images/Courses/Group 7.png'),
+    AssetImage('Images/Courses/Group 8.png'),
+    AssetImage('Images/Courses/Group 16.png'),
+  ];
+
+  var coursesUrl = [
+    'https://homeflicwegrow.com/music.php',
+    'https://homeflicwegrow.com/graphic-design.php',
+    'https://homeflicwegrow.com/nism.php',
+    'https://homeflicwegrow.com/ethical-hacking.php',
+    'https://homeflicwegrow.com/digital-marketing.php',
+    'https://homeflicwegrow.com/python.php',
+  ];
+
   var _color = [
     Color(0xFFf24d65),
     Color(0xFF11aeef),
@@ -257,10 +275,6 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                   },
                 ),
               ),
-
-
-
-
               Padding(
                 padding: const EdgeInsets.only(
                     top: 25, left: 10, right: 10, bottom: 10),
@@ -298,7 +312,52 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                       child: Container(
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: cardImage[_idx],
+                              image: cardImage[_idx], fit: BoxFit.fill),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                    top: 25, left: 10, right: 10, bottom: 10),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    width: double.infinity,
+                    decoration: BoxDecoration(color: _color[3]),
+                    child: Text(
+                      'Courses',
+                      style: headingText,
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                height: 300,
+                width: double.infinity,
+                child: Swiper(
+                  layout: SwiperLayout.TINDER,
+                  itemWidth: MediaQuery.of(context).size.width,
+                  itemHeight: MediaQuery.of(context).size.height * 0.5,
+                  itemCount: 6,
+                  autoplay: true,
+                  autoplayDelay: 6000,
+                  loop: true,
+                  onTap: (index) {
+                    launch(coursesUrl[index]);
+                  },
+                  itemBuilder: (BuildContext context, int _idx) {
+                    return ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: coursesImage[_idx],
+                            fit: BoxFit.fill,
                           ),
                         ),
                       ),
