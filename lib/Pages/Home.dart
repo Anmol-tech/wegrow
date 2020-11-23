@@ -293,12 +293,12 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                 ),
               ),
               Container(
-                height: 250,
+                height: MediaQuery.of(context).size.height * 0.4,
                 width: double.infinity,
                 child: Swiper(
                   layout: SwiperLayout.TINDER,
                   itemWidth: MediaQuery.of(context).size.width,
-                  itemHeight: MediaQuery.of(context).size.height * 0.5,
+                  itemHeight: MediaQuery.of(context).size.height * 0.4,
                   itemCount: 4,
                   autoplay: true,
                   autoplayDelay: 6000,
@@ -337,12 +337,12 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                 ),
               ),
               Container(
-                height: 300,
+                height: MediaQuery.of(context).size.height * 0.65,
                 width: double.infinity,
                 child: Swiper(
                   layout: SwiperLayout.TINDER,
                   itemWidth: MediaQuery.of(context).size.width,
-                  itemHeight: MediaQuery.of(context).size.height * 0.5,
+                  itemHeight: MediaQuery.of(context).size.height * 0.65,
                   itemCount: 6,
                   autoplay: true,
                   autoplayDelay: 6000,
