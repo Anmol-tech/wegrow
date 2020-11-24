@@ -199,17 +199,19 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: EdgeInsets.symmetric(
-                              vertical: 10, horizontal: 30),
-                          child: Text(
-                            "Homeflic wegrow is a tribe of people from all over the world, having diverse mindsets and personalities, learning and growing together. It’s a platform where people can showcase their talent, discuss their problems, talk about trending topics and build a network stronger than any bond. Focusing on holistic development of our members along with us, we believe in learning, working, and growing together.",
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.montserrat(
-                              textStyle: TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black87,
+                        SingleChildScrollView(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10, horizontal: 30),
+                            child: Text(
+                              "Homeflic wegrow is a tribe of people from all over the world, having diverse mindsets and personalities, learning and growing together. It’s a platform where people can showcase their talent, discuss their problems, talk about trending topics and build a network stronger than any bond. Focusing on holistic development of our members along with us, we believe in learning, working, and growing together.",
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.montserrat(
+                                textStyle: TextStyle(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black87,
+                                ),
                               ),
                             ),
                           ),
