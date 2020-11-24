@@ -39,14 +39,16 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
     AssetImage('Images/Cards/Tribe_Pass_X.png'),
     AssetImage('Images/Cards/Tribe_Pass_Z.png'),
     AssetImage('Images/Cards/Tribe_Pass_Zplus.png'),
-    AssetImage('Images/Cards/Champs_Masters.png'),
   ];
+
+  var kidCardImage = [AssetImage('Images/Cards/Champs_Masters.png')];
+
+  var kidCardUrl = ['https://homeflicwegrow.com/wegrow-champs.php',];
 
   var cardUrl = [
     'https://homeflicwegrow.com/tribe-pass-x.php',
     'https://homeflicwegrow.com/tribe-pass-z.php',
     'https://homeflicwegrow.com/tribe-pass-zplus.php',
-    'https://homeflicwegrow.com/wegrow-champs.php',
   ];
 
   var coursesImage = [
@@ -74,6 +76,8 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
     Color(0XFFc2436f),
     Color(0xFFe08727),
   ];
+
+
 
   final _databaseReference = FirebaseDatabase.instance.reference();
 
@@ -223,10 +227,9 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
               ),
               Container(
                 height: 250,
-                // width: double.infinit,
                 child: Swiper(
                   autoplay: true,
-                  autoplayDelay: 6000,
+                  autoplayDelay: 4000,
                   layout: SwiperLayout.STACK,
                   itemWidth: MediaQuery.of(context).size.width * 0.8,
                   itemHeight: 300.0,
@@ -301,7 +304,7 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                   layout: SwiperLayout.TINDER,
                   itemWidth: MediaQuery.of(context).size.width,
                   itemHeight: MediaQuery.of(context).size.height * 0.4,
-                  itemCount: 4,
+                  itemCount: 3,
                   autoplay: true,
                   autoplayDelay: 6000,
                   loop: true,
@@ -319,6 +322,40 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                       ),
                     );
                   },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                    top: 25, left: 10, right: 10, bottom: 10),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    width: double.infinity,
+                    decoration: BoxDecoration(color: _color[2]),
+                    child: Text(
+                      'Kids Section',
+                      style: headingText,
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.all(20),
+                height: MediaQuery.of(context).size.height * 0.4,
+                width: double.infinity,
+                child: InkWell(
+                  onTap: ()=> launch(kidCardUrl[0]),
+                  child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: kidCardImage[0], fit: BoxFit.fill),
+                        ),
+                      ),
+                    ),
                 ),
               ),
               Padding(
