@@ -1,5 +1,8 @@
+import 'dart:html';
+
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -433,7 +436,7 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                   },
                 ),
               ),
-              // Padding(
+                            // Padding(
               //   padding: const EdgeInsets.only(
               //       top: 25, left: 10, right: 10, bottom: 10),
               //   child: ClipRRect(
@@ -539,6 +542,9 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
               //     ),
               //   ),
               // ),
+             RaisedButton(onPressed: () => Navigator.pushNamed(context, "/ContactUs" ),
+             color: _color[2],
+             child: Text("Contact Us", style: headingText,),)
             ],
           ),
         ),
