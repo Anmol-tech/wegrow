@@ -43,7 +43,9 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
 
   var kidCardImage = [AssetImage('Images/Cards/Champs_Masters.png')];
 
-  var kidCardUrl = ['https://homeflicwegrow.com/wegrow-champs.php',];
+  var kidCardUrl = [
+    'https://homeflicwegrow.com/wegrow-champs.php',
+  ];
 
   var cardUrl = [
     'https://homeflicwegrow.com/tribe-pass-x.php',
@@ -76,8 +78,6 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
     Color(0XFFc2436f),
     Color(0xFFe08727),
   ];
-
-
 
   final _databaseReference = FirebaseDatabase.instance.reference();
 
@@ -149,7 +149,7 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(0.0),
                 child: LimitedBox(
                   // maxHeight: 200,
                   child: AspectRatio(
@@ -163,7 +163,7 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                       loop: _loop,
                       itemBuilder: (BuildContext context, int index) {
                         return ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(0),
                           child: new Image.network(
                             _imgList[index],
                             fit: BoxFit.fill,
@@ -172,7 +172,7 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                       },
                       itemCount: _imgList.length,
                       viewportFraction: 1,
-                      scale: 0.9,
+                      scale: 1,
                     ),
                   ),
                 ),
@@ -282,9 +282,9 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                    top: 25, left: 10, right: 10, bottom: 10),
+                    top: 25, left: 0, right: 0, bottom: 10),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(2),
                   child: Container(
                     padding: EdgeInsets.all(10),
                     width: double.infinity,
@@ -326,15 +326,15 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                    top: 25, left: 10, right: 10, bottom: 10),
+                    top: 25, left: 0, right: 0, bottom: 10),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(2),
                   child: Container(
                     padding: EdgeInsets.all(10),
                     width: double.infinity,
                     decoration: BoxDecoration(color: _color[2]),
                     child: Text(
-                      'Kids Section',
+                      'Wegrow Champs / Masters',
                       style: headingText,
                       textAlign: TextAlign.center,
                     ),
@@ -346,23 +346,23 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                 height: MediaQuery.of(context).size.height * 0.4,
                 width: double.infinity,
                 child: InkWell(
-                  onTap: ()=> launch(kidCardUrl[0]),
+                  onTap: () => launch(kidCardUrl[0]),
                   child: ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: kidCardImage[0], fit: BoxFit.fill),
-                        ),
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: kidCardImage[0], fit: BoxFit.fill),
                       ),
                     ),
+                  ),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                    top: 25, left: 10, right: 10, bottom: 10),
+                    top: 25, left: 0, right: 0, bottom: 10),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(2),
                   child: Container(
                     padding: EdgeInsets.all(10),
                     width: double.infinity,
@@ -404,112 +404,141 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                   },
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    top: 25, left: 10, right: 10, bottom: 10),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(15),
-                  child: Container(
-                    padding: EdgeInsets.all(10),
-                    width: double.infinity,
-                    decoration: BoxDecoration(color: _color[2]),
-                    child: Text(
-                      'Testimonials',
-                      style: headingText,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 10.0),
-                child: LimitedBox(
-                  maxWidth: double.infinity,
-                  maxHeight: MediaQuery.of(context).orientation ==
-                          Orientation.landscape
-                      ? MediaQuery.of(context).size.width * 0.6
-                      : MediaQuery.of(context).size.height * 0.6,
-                  child: Swiper(
-                    autoplayDelay: 4000,
-                    loop: true,
-                    autoplay: true,
-                    itemBuilder: (BuildContext context, int _idx) {
-                      return Center(
-                        child: Container(
-                          child: Card(
-                            elevation: 10,
-                            borderOnForeground: true,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                              side: BorderSide(
-                                  color: _color[_idx % 5], width: 10),
-                            ),
-                            child: SingleChildScrollView(
-                              child: Padding(
-                                padding: const EdgeInsets.all(30.0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    CircleAvatar(
-                                      backgroundColor: _color[_idx % 5],
-                                      radius: MediaQuery.of(context)
-                                              .size
-                                              .shortestSide *
-                                          0.13,
-                                      backgroundImage: NetworkImage(
-                                          _testimonialList[_idx]['photo']
-                                              .toString()),
-                                    ),
-                                    Container(
-                                      margin: EdgeInsets.only(top: 10),
-                                      child: Text(
-                                        _testimonialList[_idx]["name"]
-                                            .toString(),
-                                        style: nameText,
-                                      ),
-                                    ),
-                                    Container(
-                                      child: Text(
-                                        _testimonialList[_idx]["college"]
-                                            .toString(),
-                                        style: nameText,
-                                      ),
-                                    ),
-                                    Container(
-                                      child: Text(
-                                        _testimonialList[_idx]["city"]
-                                            .toString(),
-                                        style: nameText,
-                                      ),
-                                    ),
-                                    Container(
-                                      margin: EdgeInsets.only(
-                                          top: 15,
-                                          left: 15,
-                                          right: 15,
-                                          bottom: 5),
-                                      child: Text(
-                                        _testimonialList[_idx]["testimonial"]
-                                            .toString(),
-                                        textAlign: TextAlign.justify,
-                                        style: bodyText,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
+              Container(
+                height: MediaQuery.of(context).size.height * 0.65,
+                width: double.infinity,
+                child: Swiper(
+                  layout: SwiperLayout.TINDER,
+                  itemWidth: MediaQuery.of(context).size.width,
+                  itemHeight: MediaQuery.of(context).size.height * 0.65,
+                  itemCount: 6,
+                  autoplay: true,
+                  autoplayDelay: 6000,
+                  loop: true,
+                  onTap: (index) {
+                    launch(coursesUrl[index]);
+                  },
+                  itemBuilder: (BuildContext context, int _idx) {
+                    return ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: coursesImage[_idx],
+                            fit: BoxFit.fill,
                           ),
                         ),
-                      );
-                    },
-                    itemCount: _testimonialList.length,
-                    viewportFraction: 0.8,
-                    scale: 0.9,
-                  ),
+                      ),
+                    );
+                  },
                 ),
               ),
+              // Padding(
+              //   padding: const EdgeInsets.only(
+              //       top: 25, left: 10, right: 10, bottom: 10),
+              //   child: ClipRRect(
+              //     borderRadius: BorderRadius.circular(15),
+              //     child: Container(
+              //       padding: EdgeInsets.all(10),
+              //       width: double.infinity,
+              //       decoration: BoxDecoration(color: _color[2]),
+              //       child: Text(
+              //         'Testimonials',
+              //         style: headingText,
+              //         textAlign: TextAlign.center,
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.only(bottom: 10.0),
+              //   child: LimitedBox(
+              //     maxWidth: double.infinity,
+              //     maxHeight: MediaQuery.of(context).orientation ==
+              //             Orientation.landscape
+              //         ? MediaQuery.of(context).size.width * 0.6
+              //         : MediaQuery.of(context).size.height * 0.6,
+              //     child: Swiper(
+              //       autoplayDelay: 4000,
+              //       loop: true,
+              //       autoplay: true,
+              //       itemBuilder: (BuildContext context, int _idx) {
+              //         return Center(
+              //           child: Container(
+              //             child: Card(
+              //               elevation: 10,
+              //               borderOnForeground: true,
+              //               shape: RoundedRectangleBorder(
+              //                 borderRadius: BorderRadius.circular(20),
+              //                 side: BorderSide(
+              //                     color: _color[_idx % 5], width: 10),
+              //               ),
+              //               child: SingleChildScrollView(
+              //                 child: Padding(
+              //                   padding: const EdgeInsets.all(30.0),
+              //                   child: Column(
+              //                     crossAxisAlignment: CrossAxisAlignment.center,
+              //                     mainAxisAlignment: MainAxisAlignment.start,
+              //                     children: [
+              //                       CircleAvatar(
+              //                         backgroundColor: _color[_idx % 5],
+              //                         radius: MediaQuery.of(context)
+              //                                 .size
+              //                                 .shortestSide *
+              //                             0.13,
+              //                         backgroundImage: NetworkImage(
+              //                             _testimonialList[_idx]['photo']
+              //                                 .toString()),
+              //                       ),
+              //                       Container(
+              //                         margin: EdgeInsets.only(top: 10),
+              //                         child: Text(
+              //                           _testimonialList[_idx]["name"]
+              //                               .toString(),
+              //                           style: nameText,
+              //                         ),
+              //                       ),
+              //                       Container(
+              //                         child: Text(
+              //                           _testimonialList[_idx]["college"]
+              //                               .toString(),
+              //                           style: nameText,
+              //                         ),
+              //                       ),
+              //                       Container(
+              //                         child: Text(
+              //                           _testimonialList[_idx]["city"]
+              //                               .toString(),
+              //                           style: nameText,
+              //                         ),
+              //                       ),
+              //                       Container(
+              //                         margin: EdgeInsets.only(
+              //                             top: 15,
+              //                             left: 15,
+              //                             right: 15,
+              //                             bottom: 5),
+              //                         child: Text(
+              //                           _testimonialList[_idx]["testimonial"]
+              //                               .toString(),
+              //                           textAlign: TextAlign.justify,
+              //                           style: bodyText,
+              //                         ),
+              //                       ),
+              //                     ],
+              //                   ),
+              //                 ),
+              //               ),
+              //             ),
+              //           ),
+              //         );
+              //       },
+              //       itemCount: _testimonialList.length,
+              //       viewportFraction: 0.8,
+              //       scale: 0.9,
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),
