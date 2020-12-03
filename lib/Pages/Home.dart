@@ -1,11 +1,11 @@
-import 'dart:html';
-
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:wegrow/Pages/Contact.dart';
+import 'package:wegrow/Pages/Structure.dart';
 
 import 'DownloadData.dart';
 
@@ -18,6 +18,7 @@ class _HomeState extends State<Home> {
   var _makeCall = MakeCall();
   var _imgList = [];
   var _testimonialList = [];
+  var _lowwerBannerList = [];
   var _loop = false;
 
   var bandHeading = [
@@ -91,10 +92,20 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
           if (snapshot.data != null) {
             _imgList.clear();
             _testimonialList.clear();
+            _lowwerBannerList.clear();
             for (int i = 0; i < snapshot.data["Banner"].length; i++) {
               _imgList.add(
                 // Image.network(
                 snapshot.data["Banner"][i]["img"].toString(),
+                // fit: BoxFit.fill,
+                // ),
+              );
+            }
+            for (int i = 0; i < snapshot.data["LowwerBanner"].length; i++) {
+              _lowwerBannerList.add(
+                // Image.network(
+                snapshot.data["LowwerBanner"][i]["img"].toString(),
+
                 // fit: BoxFit.fill,
                 // ),
               );
@@ -414,20 +425,22 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                   layout: SwiperLayout.TINDER,
                   itemWidth: MediaQuery.of(context).size.width,
                   itemHeight: MediaQuery.of(context).size.height * 0.65,
-                  itemCount: 6,
+                  itemCount: _lowwerBannerList.length,
                   autoplay: true,
                   autoplayDelay: 6000,
                   loop: true,
-                  onTap: (index) {
-                    launch(coursesUrl[index]);
-                  },
+                  // onTap: (index) {
+                  //   launch(coursesUrl[index]);
+                  // },
                   itemBuilder: (BuildContext context, int _idx) {
                     return ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: Container(
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: coursesImage[_idx],
+                            image: NetworkImage(
+                              _lowwerBannerList[_idx],
+                            ),
                             fit: BoxFit.fill,
                           ),
                         ),
@@ -436,7 +449,7 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                   },
                 ),
               ),
-                            // Padding(
+              // Padding(
               //   padding: const EdgeInsets.only(
               //       top: 25, left: 10, right: 10, bottom: 10),
               //   child: ClipRRect(
@@ -542,9 +555,25 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
               //     ),
               //   ),
               // ),
-             RaisedButton(onPressed: () => Navigator.pushNamed(context, "/ContactUs" ),
-             color: _color[2],
-             child: Text("Contact Us", style: headingText,),)
+              Container(
+                padding: EdgeInsets.all(20),
+                width: MediaQuery.of(context).size.width * 0.8,
+                child: RaisedButton(
+                  elevation: 20,
+                  padding: EdgeInsets.all(8),
+                  shape: ContinuousRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  onPressed: () {
+                    Index.idx = 3;
+                    Index.refresh(context);
+                  },
+                  color: _color[1],
+                  child: Text(
+                    "Contact Us",
+                    style: headingText,
+                  ),
+                ),
+              )
             ],
           ),
         ),

@@ -13,6 +13,18 @@ class Strucutre extends StatefulWidget {
   _StrucutreState createState() => _StrucutreState();
 }
 
+class Index {
+  static int idx = 0;
+
+  static void ValueSetter(int index) {
+    idx = index;
+  }
+
+  static refresh(BuildContext context) {
+    Navigator.pushReplacementNamed(context, '/');
+  }
+}
+
 class _StrucutreState extends State<Strucutre> {
   var titles = ['Home', 'WHAT YOU GET?', 'Know Your Wegrow', 'Contact us'];
   var bodies = [
@@ -22,7 +34,7 @@ class _StrucutreState extends State<Strucutre> {
     Contact(),
   ];
 
-  int _idx = 0;
+  var _idx = Index();
   @override
   Widget build(BuildContext context) {
     // var factor = MediaQuery.of(context).size;
@@ -61,7 +73,7 @@ class _StrucutreState extends State<Strucutre> {
               ),
               onTap: () {
                 setState(() {
-                  _idx = 0;
+                  Index.idx = 0;
                 });
                 Navigator.pop(context);
               },
@@ -74,7 +86,7 @@ class _StrucutreState extends State<Strucutre> {
               ),
               onTap: () {
                 setState(() {
-                  _idx = 1;
+                  Index.idx = 1;
                 });
                 Navigator.pop(context);
               },
@@ -97,7 +109,7 @@ class _StrucutreState extends State<Strucutre> {
               ),
               onTap: () {
                 setState(() {
-                  _idx = 2;
+                  Index.idx = 2;
                 });
                 Navigator.pop(context);
               },
@@ -110,7 +122,7 @@ class _StrucutreState extends State<Strucutre> {
               ),
               onTap: () {
                 setState(() {
-                  _idx = 3;
+                  Index.idx = 3;
                 });
                 Navigator.pop(context);
               },
@@ -120,7 +132,7 @@ class _StrucutreState extends State<Strucutre> {
       ),
       appBar: GFAppBar(
         title: Text(
-          titles[_idx],
+          titles[Index.idx],
           style: titleText,
         ),
         centerTitle: true,
@@ -148,7 +160,7 @@ class _StrucutreState extends State<Strucutre> {
             labelColor: Colors.blue,
           ),
         ],
-        body: bodies[_idx],
+        body: bodies[Index.idx],
       ),
     );
   }

@@ -9,11 +9,15 @@ Future<void> main() async {
   await Firebase.initializeApp();
   runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      routes: {"/ContactUs": (context) => Contact() },
+      routes: {
+        "/ContactUs": (context) => Contact(),
+        '/': (context) => Strucutre(),
+      },
       debugShowCheckedModeBanner: false,
       title: 'Wegrow',
       theme: ThemeData(
@@ -21,7 +25,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(0xFFFF0065),
         accentColor: Color(0xFF00A651),
       ),
-      home: Strucutre(),
+      initialRoute: '/',
     );
   }
 }
