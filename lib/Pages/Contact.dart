@@ -222,13 +222,15 @@ New Delhi, 110007''',
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(20.0),
-                          child: Card(
-                            elevation: 20,
+                          child: Material(
+                            elevation: 10,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)),
                             child: InkWell(
                               onTap: () => launch(
                                   'https://www.facebook.com/homeflic.wegrow'),
                               child: Image.asset(
-                                'Images/Logo/facebook.png',
+                                'Images/Icons/facebook.png',
                                 width: width * 0.12,
                                 // height: height * 0.12,
                               ),
@@ -238,15 +240,17 @@ New Delhi, 110007''',
                         Padding(
                           padding: const EdgeInsets.symmetric(
                               vertical: 20.0, horizontal: 10),
-                          child: Card(
+                          child: Material(
                             elevation: 10,
-                            color: Colors.transparent,
+                            // color: Colors.transparent,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)),
                             child: InkWell(
                               onTap: () => launch(
                                   'https://www.instagram.com/homeflic_wegrow'),
                               child: Image.asset(
-                                'Images/Logo/instagram.png',
-                                width: width * 0.14,
+                                'Images/Icons/instagram.png',
+                                width: width * 0.12,
                                 // height: height * 0.12,
                               ),
                             ),
@@ -254,13 +258,15 @@ New Delhi, 110007''',
                         ),
                         Padding(
                           padding: const EdgeInsets.all(20.0),
-                          child: Card(
-                            elevation: 20,
+                          child: Material(
+                            elevation: 10,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)),
                             child: InkWell(
                               onTap: () => launch(
                                   'https://www.linkedin.com/company/homeflic-wegrow/?viewAsMember=true'),
                               child: Image.asset(
-                                'Images/Logo/linkedin.png',
+                                'Images/Icons/linkdin.png',
                                 width: width * 0.12,
                                 // height: height * 0.13,
                               ),
@@ -269,13 +275,15 @@ New Delhi, 110007''',
                         ),
                         Padding(
                           padding: const EdgeInsets.all(20.0),
-                          child: Card(
-                            elevation: 20,
+                          child: Material(
+                            elevation: 10,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)),
                             child: InkWell(
                               onTap: () => launch(
                                   'https://www.youtube.com/channel/UCroIHcTDXo-EL6FQEfQs1Mg'),
                               child: Image.asset(
-                                'Images/Logo/youtube.png',
+                                'Images/Icons/youtube.png',
                                 width: width * 0.12,
                                 // height: height * 0.1,
                               ),
