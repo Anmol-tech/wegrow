@@ -421,32 +421,41 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
               Container(
                 height: MediaQuery.of(context).size.height * 0.65,
                 width: double.infinity,
-                child: Swiper(
-                  layout: SwiperLayout.TINDER,
-                  itemWidth: MediaQuery.of(context).size.width,
-                  itemHeight: MediaQuery.of(context).size.height * 0.65,
-                  itemCount: _lowwerBannerList.length,
-                  autoplay: true,
-                  autoplayDelay: 6000,
-                  loop: true,
-                  // onTap: (index) {
-                  //   launch(coursesUrl[index]);
-                  // },
-                  itemBuilder: (BuildContext context, int _idx) {
-                    return ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: NetworkImage(
-                              _lowwerBannerList[_idx],
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical : 10.0, horizontal : 5.0),
+                  child: Swiper(
+                    viewportFraction: 0.8,
+                    itemWidth: MediaQuery.of(context).size.width,
+                    itemHeight: MediaQuery.of(context).size.height * 0.65,
+                    itemCount: _lowwerBannerList.length,
+                    autoplay: true,
+                    autoplayDelay: 6000,
+                    loop: true,
+                    // onTap: (index) {
+                    //   launch(coursesUrl[index]);
+                    // },
+                    itemBuilder: (BuildContext context, int _idx) {
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(vertical : 10.0, horizontal: 8.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Material(
+                            elevation: 20,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: NetworkImage(
+                                    _lowwerBannerList[_idx],
+                                  ),
+                                  fit: BoxFit.fill,
+                                ),
+                              ),
                             ),
-                            fit: BoxFit.fill,
                           ),
                         ),
-                      ),
-                    );
-                  },
+                      );
+                    },
+                  ),
                 ),
               ),
               // Padding(
