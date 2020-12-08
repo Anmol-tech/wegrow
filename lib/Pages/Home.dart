@@ -269,10 +269,10 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                             ),
                           ),
                           Container(
-                            width: MediaQuery.of(context).size.width * 0.45,
+                            width: MediaQuery.of(context).size.width * 0.44,
                             child: Padding(
                               padding: const EdgeInsets.symmetric(
-                                  vertical: 10, horizontal: 15),
+                                  vertical: 10, horizontal: 18),
                               child: SingleChildScrollView(
                                 child: Text(
                                   bandBodyText[_idx],
