@@ -567,131 +567,137 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
               //   ),
               // ),
               Container(
-                padding: EdgeInsets.only(top: 20, bottom: 80),
+                margin: EdgeInsets.only(top: 20, bottom: 80),
                 width: MediaQuery.of(context).size.width * 0.98,
-                child: Material(
-                  elevation: 20,
-                  shape: ContinuousRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
                   color: Color(0xFFffc18f),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10.0),
-                          child: Material(
-                            elevation: 10,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
-                            child: InkWell(
-                              onTap: () => launch(
-                                  'https://www.facebook.com/homeflic.wegrow'),
-                              child: Image.asset(
-                                'Images/Icons/facebook.png',
-                                width: MediaQuery.of(context).size.width * 0.08,
-                                // height: height * 0.12,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 5, right: 5),
-                          child: Material(
-                            elevation: 10,
-                            // color: Colors.transparent,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
-                            child: InkWell(
-                              onTap: () => launch(
-                                  'https://www.instagram.com/homeflic_wegrow'),
-                              child: Image.asset(
-                                'Images/Icons/instagram.png',
-                                width: MediaQuery.of(context).size.width * 0.08,
-                                // height: height * 0.12,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 5.0),
-                          child: Material(
-                            elevation: 10,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
-                            child: InkWell(
-                              onTap: () => launch(
-                                  'https://www.linkedin.com/company/homeflic-wegrow/?viewAsMember=true'),
-                              child: Image.asset(
-                                'Images/Icons/linkdin.png',
-                                width: MediaQuery.of(context).size.width * 0.08,
-                                // height: height * 0.13,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 0),
-                          child: Material(
-                            elevation: 10,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
-                            child: InkWell(
-                              onTap: () => launch(
-                                  'https://www.youtube.com/channel/UCroIHcTDXo-EL6FQEfQs1Mg'),
-                              child: Image.asset(
-                                'Images/Icons/whatsapp.png',
-                                width: MediaQuery.of(context).size.width * 0.08,
-                                // height: height * 0.1,
-                              ),
-                            ),
-                          ),
-                        ),
-                        RichText(
-                          textAlign: TextAlign.center,
-                          text: TextSpan(
-                            style: GoogleFonts.montserrat(
-                              textStyle: TextStyle(
-                                fontSize:
-                                    MediaQuery.of(context).size.width * 0.033,
-                                color: Colors.black87,
-                              ),
-                            ),
-                            // style: TextStyle(fontSize: 15, color: Colors.black87),
-                            children: [
-                              TextSpan(
-                                text: '''Need help? Contact us \nat''',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10.0),
+                            child: Material(
+                              elevation: 10,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20)),
+                              child: InkWell(
+                                onTap: () => launch(
+                                    'https://www.facebook.com/homeflic.wegrow'),
+                                child: Image.asset(
+                                  'Images/Icons/facebook.png',
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.08,
+                                  // height: height * 0.12,
                                 ),
                               ),
-                              TextSpan(
-                                text: " hello@homeflicwegrow.com",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              TextSpan(
-                                text: "\nor call us at",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                              TextSpan(
-                                text: " 7217015332/33/37",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            ],
+                            ),
                           ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 5, right: 5),
+                            child: Material(
+                              elevation: 10,
+                              // color: Colors.transparent,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20)),
+                              child: InkWell(
+                                onTap: () => launch(
+                                    'https://www.instagram.com/homeflic_wegrow'),
+                                child: Image.asset(
+                                  'Images/Icons/instagram.png',
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.08,
+                                  // height: height * 0.12,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 5.0),
+                            child: Material(
+                              elevation: 10,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20)),
+                              child: InkWell(
+                                onTap: () => launch(
+                                    'https://www.linkedin.com/company/homeflic-wegrow/?viewAsMember=true'),
+                                child: Image.asset(
+                                  'Images/Icons/linkdin.png',
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.08,
+                                  // height: height * 0.13,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 0),
+                            child: Material(
+                              elevation: 10,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20)),
+                              child: InkWell(
+                                onTap: () => launch(
+                                    'https://www.youtube.com/channel/UCroIHcTDXo-EL6FQEfQs1Mg'),
+                                child: Image.asset(
+                                  'Images/Icons/whatsapp.png',
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.08,
+                                  // height: height * 0.1,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      RichText(
+                        textAlign: TextAlign.center,
+                        text: TextSpan(
+                          style: GoogleFonts.montserrat(
+                            textStyle: TextStyle(
+                              fontSize:
+                                  MediaQuery.of(context).size.width * 0.033,
+                              color: Colors.black87,
+                            ),
+                          ),
+                          // style: TextStyle(fontSize: 15, color: Colors.black87),
+                          children: [
+                            TextSpan(
+                              text: '''Need help? Contact us \nat''',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            TextSpan(
+                              text: " hello@homeflicwegrow.com",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            TextSpan(
+                              text: "\nor call us at",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            TextSpan(
+                              text: " 7217015332/33/37",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

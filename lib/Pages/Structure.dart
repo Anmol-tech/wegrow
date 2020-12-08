@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hawk_fab_menu/hawk_fab_menu.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:wegrow/Pages/Contact.dart';
+import 'package:wegrow/Pages/Contact2.dart';
 import 'package:wegrow/Pages/FAQ.dart';
 import 'package:wegrow/Pages/Home.dart';
 import 'package:wegrow/Pages/WhatYouGet.dart';
@@ -31,6 +32,7 @@ class _StrucutreState extends State<Strucutre> {
     Home(),
     WhatYouGet(),
     FAQ(),
+    Contact2(),
     Contact(),
   ];
 
