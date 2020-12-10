@@ -36,7 +36,6 @@ class _StrucutreState extends State<Strucutre> {
     Contact(),
   ];
 
-  var _idx = Index();
   @override
   Widget build(BuildContext context) {
     // var factor = MediaQuery.of(context).size;

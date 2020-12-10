@@ -23,11 +23,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  blobs: ^1.2.0
   cupertino_icons: ^1.0.0
   expansion_tile_card: ^1.1.0
   firebase: ^7.3.2
   firebase_core: ^0.5.0+1
   firebase_database: ^4.1.1
+  flutter_custom_clippers: ^1.1.2
   flutter_launcher_icons: ^0.7.4
   flutter_swiper: ^1.1.6
   getwidget: ^1.2.2
@@ -65,6 +67,7 @@ flutter:
     - Images/Logo/linkedin.png
     - Images/Logo/youtube.png
     - Images/Icons/
+    - Images/wegrow.png
     - Images/Images/icon1.png
     - Images/Images/icon2.png
     - Images/Images/icon3.png
@@ -84,6 +87,7 @@ flutter:
     - Images/Band/
     - Images/Cards/
     - Images/Courses/
+    - Images/Contact/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

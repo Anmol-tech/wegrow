@@ -1,11 +1,8 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:wegrow/Pages/Contact.dart';
-import 'package:wegrow/Pages/Structure.dart';
 
 import 'DownloadData.dart';
 
@@ -136,21 +133,6 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
             orentation == Orientation.landscape ? factor * 20 : factor * 40,
         fontWeight: FontWeight.w600,
         color: Colors.white,
-      ),
-    );
-
-    var bodyText = GoogleFonts.montserrat(
-      textStyle: TextStyle(
-        fontSize:
-            orentation == Orientation.landscape ? factor * 12 : factor * 30,
-        fontWeight: FontWeight.w400,
-      ),
-    );
-    var nameText = GoogleFonts.montserrat(
-      textStyle: TextStyle(
-        fontSize:
-            orentation == Orientation.landscape ? factor * 13 : factor * 30,
-        fontWeight: FontWeight.w500,
       ),
     );
 
@@ -643,7 +625,7 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                                   borderRadius: BorderRadius.circular(20)),
                               child: InkWell(
                                 onTap: () => launch(
-                                    'https://www.youtube.com/channel/UCroIHcTDXo-EL6FQEfQs1Mg'),
+                                    'https://wa.me/message/WC3YN7HY5M7ZC1'),
                                 child: Image.asset(
                                   'Images/Icons/whatsapp.png',
                                   width:
