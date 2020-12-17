@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -8,6 +9,15 @@ class Contact2 extends StatefulWidget {
 }
 
 class _Contact2State extends State<Contact2> {
+  _getheight(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    print(height);
+
+    return MediaQuery.of(context).orientation == Orientation.portrait
+        ? MediaQuery.of(context).size.width * .7
+        : MediaQuery.of(context).size.width * .45;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,10 +27,7 @@ class _Contact2State extends State<Contact2> {
             Container(
               color: Color(0xFF429AE0),
               child: Container(
-                height:
-                    MediaQuery.of(context).orientation == Orientation.portrait
-                        ? MediaQuery.of(context).size.height * .45
-                        : MediaQuery.of(context).size.width * .5,
+                height: _getheight(context),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -43,7 +50,7 @@ class _Contact2State extends State<Contact2> {
                               'Images/Contact/sofa-girl.png',
                               width: MediaQuery.of(context).orientation ==
                                       Orientation.portrait
-                                  ? MediaQuery.of(context).size.width * .6
+                                  ? MediaQuery.of(context).size.width * .5
                                   : MediaQuery.of(context).size.width * .36,
                             ),
                           ),
@@ -141,6 +148,7 @@ class _Contact2State extends State<Contact2> {
               ),
             ),
             Container(
+              padding: EdgeInsets.only(bottom: 60),
               width: double.infinity,
               decoration: BoxDecoration(
                 color: Color(0xFF429AE0),
@@ -262,8 +270,8 @@ class _Contact2State extends State<Contact2> {
                                                 borderRadius:
                                                     BorderRadius.circular(20)),
                                             child: InkWell(
-                                              onTap: () => launch(
-                                                  'https://www.linkedin.com/company/homeflic-wegrow/?viewAsMember=true'),
+                                              // onTap: () => launch(
+                                              //     'https://www.linkedin.com/company/homeflic-wegrow/?viewAsMember=true'),
                                               child: Image.asset(
                                                 'Images/Icons/telegram.png',
                                                 width: MediaQuery.of(context)

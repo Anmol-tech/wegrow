@@ -180,7 +180,10 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                   elevation: 5,
                   child: Container(
                     width: double.infinity,
-                    height: MediaQuery.of(context).size.height * 0.35,
+                    height: MediaQuery.of(context).orientation ==
+                            Orientation.portrait
+                        ? MediaQuery.of(context).size.height * .3
+                        : MediaQuery.of(context).size.width * .3,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -208,7 +211,11 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                               textAlign: TextAlign.center,
                               style: GoogleFonts.montserrat(
                                 textStyle: TextStyle(
-                                  fontSize: 13,
+                                  fontSize: MediaQuery.of(context)
+                                              .orientation ==
+                                          Orientation.portrait
+                                      ? MediaQuery.of(context).size.width * .03
+                                      : MediaQuery.of(context).size.width * .02,
                                   fontWeight: FontWeight.w400,
                                   color: Colors.black87,
                                 ),
@@ -222,13 +229,15 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                 ),
               ),
               Container(
-                height: 250,
                 child: Swiper(
                   autoplay: true,
                   autoplayDelay: 4000,
                   layout: SwiperLayout.STACK,
                   itemWidth: MediaQuery.of(context).size.width * 0.8,
-                  itemHeight: 300.0,
+                  itemHeight:
+                      MediaQuery.of(context).orientation == Orientation.portrait
+                          ? MediaQuery.of(context).size.height * .3
+                          : MediaQuery.of(context).size.width * .5,
                   itemCount: bandBodyText.length,
                   viewportFraction: 1,
                   itemBuilder: (BuildContext context, int _idx) {
@@ -243,7 +252,11 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                               bandHeading[_idx],
                               style: GoogleFonts.montserrat(
                                 textStyle: TextStyle(
-                                  fontSize: 16,
+                                  fontSize: MediaQuery.of(context)
+                                              .orientation ==
+                                          Orientation.portrait
+                                      ? MediaQuery.of(context).size.width * .03
+                                      : MediaQuery.of(context).size.width * .03,
                                   fontWeight: FontWeight.w500,
                                   color: Colors.white,
                                 ),
@@ -260,7 +273,13 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                                   bandBodyText[_idx],
                                   style: GoogleFonts.montserrat(
                                     textStyle: TextStyle(
-                                      fontSize: 11,
+                                      fontSize: MediaQuery.of(context)
+                                                  .orientation ==
+                                              Orientation.portrait
+                                          ? MediaQuery.of(context).size.width *
+                                              .018
+                                          : MediaQuery.of(context).size.width *
+                                              .02,
                                       fontWeight: FontWeight.w500,
                                       color: Colors.white,
                                     ),
@@ -294,12 +313,18 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                 ),
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.4,
+                height:
+                    MediaQuery.of(context).orientation == Orientation.portrait
+                        ? MediaQuery.of(context).size.height * .4
+                        : MediaQuery.of(context).size.width * .5,
                 width: double.infinity,
                 child: Swiper(
                   layout: SwiperLayout.TINDER,
                   itemWidth: MediaQuery.of(context).size.width,
-                  itemHeight: MediaQuery.of(context).size.height * 0.4,
+                  itemHeight:
+                      MediaQuery.of(context).orientation == Orientation.portrait
+                          ? MediaQuery.of(context).size.height * .4
+                          : MediaQuery.of(context).size.width * .5,
                   itemCount: 3,
                   autoplay: true,
                   autoplayDelay: 6000,
@@ -339,7 +364,10 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
               ),
               Container(
                 padding: EdgeInsets.all(20),
-                height: MediaQuery.of(context).size.height * 0.4,
+                height:
+                    MediaQuery.of(context).orientation == Orientation.portrait
+                        ? MediaQuery.of(context).size.height * .4
+                        : MediaQuery.of(context).size.width * .5,
                 width: double.infinity,
                 child: InkWell(
                   onTap: () => launch(kidCardUrl[0]),
@@ -372,12 +400,18 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                 ),
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.65,
+                height:
+                    MediaQuery.of(context).orientation == Orientation.portrait
+                        ? MediaQuery.of(context).size.height * .65
+                        : MediaQuery.of(context).size.width * .5,
                 width: double.infinity,
                 child: Swiper(
                   layout: SwiperLayout.TINDER,
                   itemWidth: MediaQuery.of(context).size.width,
-                  itemHeight: MediaQuery.of(context).size.height * 0.65,
+                  itemHeight:
+                      MediaQuery.of(context).orientation == Orientation.portrait
+                          ? MediaQuery.of(context).size.height * .65
+                          : MediaQuery.of(context).size.width * .5,
                   itemCount: 6,
                   autoplay: true,
                   autoplayDelay: 6000,
@@ -400,8 +434,28 @@ Here at Homeflic Wegrow, we have built an environment of an empathetic nature wh
                   },
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.only(
+                    top: 25, left: 0, right: 0, bottom: 10),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(2),
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    width: double.infinity,
+                    decoration: BoxDecoration(color: _color[4]),
+                    child: Text(
+                      'Tribe Pass Sessions',
+                      style: headingText,
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.65,
+                height:
+                    MediaQuery.of(context).orientation == Orientation.portrait
+                        ? MediaQuery.of(context).size.height * .62
+                        : MediaQuery.of(context).size.width * .5,
                 width: double.infinity,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
