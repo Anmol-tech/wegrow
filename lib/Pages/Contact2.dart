@@ -270,8 +270,8 @@ class _Contact2State extends State<Contact2> {
                                                 borderRadius:
                                                     BorderRadius.circular(20)),
                                             child: InkWell(
-                                              // onTap: () => launch(
-                                              //     'https://www.linkedin.com/company/homeflic-wegrow/?viewAsMember=true'),
+                                              onTap: () => launch(
+                                                  'https://t.me/joinchat/AAAAAFJ0RForYYXAIilmxQ'),
                                               child: Image.asset(
                                                 'Images/Icons/telegram.png',
                                                 width: MediaQuery.of(context)
