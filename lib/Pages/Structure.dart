@@ -17,7 +17,7 @@ class Strucutre extends StatefulWidget {
 class Index {
   static int idx = 0;
 
-  static void ValueSetter(int index) {
+  static void valueSetter(int index) {
     idx = index;
   }
 
